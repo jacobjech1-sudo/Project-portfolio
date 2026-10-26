@@ -20,8 +20,6 @@ The main objectives are:
 
 ## 2. Design
 
-Explain the overall system design, including the major functional blocks and how they interact.
-
 The system is designed off a mealy FSM. The Bays3 board interfaces with a ULN2003 to convert the low power logic inputs to higher power pulses which activate the motors windings in the correct sequence. 
 
 <img width="589" height="273" alt="image" src="https://github.com/user-attachments/assets/1ef2cb9d-d1a1-4a40-8cd1-a2c51db1802c" />
@@ -33,8 +31,6 @@ The system has 2 major blocks. First A clock divider to convert the Bays3 intern
 
 ## 3. Code
 
-Explain the key sections of your VHDL code and how they implement the required functionality.
-
 --Stepper Motor FSM--
 
 The output is a 4 bit logic vector which outputs "0000", "0001", "0010", "0100", "1000" depending on which state its in (s0 to s05 respectively)
@@ -44,6 +40,8 @@ First there are 4 inputs:
   reset - resets the controller
   en - enables and disables the controller putting it back into a base state (s0)
   dir - controls the direction of the motor by flipping the order of the states 
+
+<br>
 
 The "next state" process first checks for a rising edge on the clk, then verifies that en is high and checks the direction
 After which, based on the Moore FSM it checks which state its in then assigns the next logical state. S1 -> S2 -> S3 etc 
@@ -78,9 +76,13 @@ q <= "0001" when s1,
 The testbench is very simple. It port maps the inputs, flips the clk every 10 microseconds. 
 It then sets en high and dir high and then waits 1 ms before flipping the direction
 
+<br>
+
 --clk_div--
 
 Divides the internal clock frequency to a more usable speed
+
+<br>
 
 --constraints_m--
 uses the V17 and V16 switches for dir and en respectively
@@ -88,6 +90,8 @@ uses the V17 and V16 switches for dir and en respectively
 uses button u18 for the reset
 
 uses J1-4 as the outputs to the ULN2003
+
+<br>
 
 --Stepper_controller--
 
@@ -113,20 +117,19 @@ For this simulation the stepper motor sequence and direction change was tested. 
 
 ## 5. Hardware
 
-Include and discuss:
+- **Elaborated design:**
+  <img width="1203" height="414" alt="motor elaborated design" src="https://github.com/user-attachments/assets/d4e6502b-00a4-495b-b7ce-bf89724e4b66" />
 
-- **Elaborated design:** Schematic and explanation
-- **Synthesized design:** Schematic and explanation
-- **Implementation:** Implementation results and observations
-- **Resource utilization:** FPGA resource usage
-- **Hardware testing:** Observed behaviour on the Basys3 board compared with expected functionality
-
-Include screenshots, tables, or photographs where appropriate.
 
 ## 6. Reflection
 
-Discuss:
+I unfortunately did not get past The elaborated design as I ran out of time and had to start working on the next project. I had created the Stepper_controller file but lost it somewhere along the way, i believe
+i forgot to save it to the project file when I was closing this out for the last time. 
 
-- Technical challenges encountered and how they were resolved
-- What you learned from the project
-- How the work relates to digital design concepts and theory covered in the course
+<br>
+
+I had a few technical issues such as getting the clock timing wrong in my first test bench file. I found I was incorrectly setting the clock leading to the states not changing. I also had set up the "next state" port of the FSM file wrong leading to the incorrect sequence running. This was a simple fix however as i just double checked my code and adjusted the states.
+
+<br> 
+
+I gained knowledge on how to program state machines which came in handy on our design project. The state->next state is an interesting concept that i had fun implementing. I also learned a lot of about state machines and how to program a mealy vs moore design
