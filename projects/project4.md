@@ -8,7 +8,15 @@ title: Project 4
 
 ## 1. Introduction
 
-Describe the project idea, its purpose, and the main objectives.
+The idea of the project is to build a wave form generator that is capable of generating Sine,Square and Triangle waves. It can be used to test filter response. 
+
+Main objectives: 
+
+- Generate waveform samples using lookup tables (ROM) and digital logic.
+- Develop reusable designs using subprograms, libraries, and packages
+- Design and implement a multi-waveform generator on FPGA
+- Implement waveform selection using digital control inputs
+- Output digital values through PMOD ports to external DAC and view the analog out signal
 
 ## 2. Design
 
