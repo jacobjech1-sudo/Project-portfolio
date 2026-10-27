@@ -103,9 +103,9 @@ Provide links to the relevant design files:
 stepper_motor_FSM.VHD 
 
 - **Design source:** [Link]
+    [stepper_motor_FSM.VHD](source/project3/stepper_motor_FSM.VHD)
 - **Testbench:** [Link]
-- **Constraints (XDC):** [Link]
-
+    [stepper_motor_FSM_tb.vhd](source/project3/stepper_motor_FSM_tb.vhd)
 
 
 ## 4. Simulation
