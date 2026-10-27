@@ -110,9 +110,15 @@ This is the top level design which combines the above 3 segments. It port maps a
 Provide links to the relevant design files:
 
 - **Design source:** [Link]
-    [clk_div] (projects/source/project2/clk_div.vhd)
+    [clk_div.vhd](source/project2/clk_div.vhd)
+    [count_display](source/project2/count_display.vhd)
+    [hex_7seg](source/project2/hex_7seg.vhd)
+    [modMcounter](source/project2/modMcounter.vhd)
 - **Testbench:** [Link]
-- **Constraints (XDC):** [Link]
+    [count_display_TB](source/project2/count_display_TB.vhd)
+    [modMcounter_tb](source/project2/modMcounter_tb.vhd)
+- **Constraints (XDC):**
+    [lab7.xdc](source/project2/lab7.xdc)
 
 Include relevant code snippets where appropriate.
 
