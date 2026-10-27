@@ -135,7 +135,7 @@ sin_scaled := (1.0 + sin(angle)) * (2.0**data_bits - 1.0) / 2.0;
 <br>
 
 The wave gen file has multiple signals declared, one table and one vector for each wave type. An address signal to keep track of its progress through the cycle of a wave.
-lastly a 2 bit selector to control which wave is currently selected (intuitive!)
+lastly a 2 bit selector to control which wave is currently selected
 
 <br>
 
