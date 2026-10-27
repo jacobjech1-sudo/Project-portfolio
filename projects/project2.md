@@ -110,7 +110,7 @@ This is the top level design which combines the above 3 segments. It port maps a
 Provide links to the relevant design files:
 
 - **Design source:** [Link]
-    [clk_div] (Project-portfolio/projects/source/project2/clk_div.vhd)
+    [clk_div] (projects/source/project2/clk_div.vhd)
 - **Testbench:** [Link]
 - **Constraints (XDC):** [Link]
 
