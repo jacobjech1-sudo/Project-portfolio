@@ -20,8 +20,6 @@ Main objectives:
 
 ## 2. Design
 
-Explain the overall system design, including the major functional blocks and how they interact.
-
 So the system has 2 major parts. The wave_gen design file and the wave_package library
 
 The wave_package library handles all the building of each wave type. It holds the table for each one.
@@ -399,9 +397,6 @@ Table of Contents
 - **Hardware testing:** Observed behaviour on the Basys3 board compared with expected functionality
 
 I unfortunately never got the chance to test it in class but i believe it would've worked perfectly
-
-
-Include screenshots, tables, or photographs where appropriate.
 
 ## 6. Reflection
 
