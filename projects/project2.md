@@ -43,6 +43,9 @@ For each scenario, explain:
 Include and discuss:
 
 - **Elaborated design:** Schematic and explanation
+  
+<img width="584" height="193" alt="image" src="https://github.com/user-attachments/assets/a03ce7a2-f107-4656-8964-d1119a465dea" />
+
 - **Synthesized design:** Schematic and explanation
 - **Implementation:** Implementation results and observations
 - **Resource utilization:** FPGA resource usage
