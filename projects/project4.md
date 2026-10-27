@@ -196,8 +196,12 @@ process (wave_sel, sine_vector, triangle_vector, square_vector)
 Provide links to the relevant design files:
 
 - **Design source:** [Link]
+  	[wave_package.vhd](source/project4/wave_package.vhd)
+  	[wavegen.vhd](source/project4/wavegen.vhd)
 - **Testbench:** [Link]
+  	[wavegen_tb.vhd](source/project4/wavegen_tb.vhd)
 - **Constraints (XDC):** [Link]
+	[lab7.xdc](source/project4/lab7.xdc)
 
 Include relevant code snippets where appropriate.
 
